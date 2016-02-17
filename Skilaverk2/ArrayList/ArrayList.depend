@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1453390798 source:c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk2\arraylist\arraylist.cpp
+	"arraylist.h"
+	<assert.h>
+	<iostream>
+
+1453320939 c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk2\arraylist\arraylist.h
+
+1453336890 source:c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk2\arraylist\main.cpp
+	<iostream>
+	<stdio.h>
+	"arraylist.cpp"
+
+1453390798 c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk2\arraylist\arraylist.cpp
+	"arraylist.h"
+	<assert.h>
+	<iostream>
+
+1453336890 source:c:\users\baldur\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk2\arraylist\main.cpp
+	<iostream>
+	<stdio.h>
+	"arraylist.cpp"
+
+1453377994 c:\users\baldur\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk2\arraylist\arraylist.cpp
+	"arraylist.h"
+	<assert.h>
+	<iostream>
+
+1453320939 c:\users\baldur\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk2\arraylist\arraylist.h
+
+1453377994 source:c:\users\baldur\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk2\arraylist\arraylist.cpp
+	"arraylist.h"
+	<assert.h>
+	<iostream>
+

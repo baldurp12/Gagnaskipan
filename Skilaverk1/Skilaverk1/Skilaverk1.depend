@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1452712298 source:c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk1\skilaverk1\main.cpp
+	<iostream>
+	<cstdlib>
+	"Matrix.h"
+
+1452712113 c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk1\skilaverk1\matrix.h
+	<string>
+	<iostream>
+
+1452712976 source:c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk1\skilaverk1\matrix.cpp
+	"Matrix.h"
+
+1452788831 source:c:\users\baldur\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk1\skilaverk1\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	"Matrix.h"
+
+1452788831 c:\users\baldur\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk1\skilaverk1\matrix.h
+	<string>
+	<iostream>
+
+1452785074 source:c:\users\baldur\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk1\skilaverk1\matrix.cpp
+	"Matrix.h"
+

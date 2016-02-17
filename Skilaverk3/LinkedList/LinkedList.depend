@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1454520197 source:c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk3\linkedlist\main.cpp
+	<iostream>
+	"LinkedList.cpp"
+
+1454523065 c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk3\linkedlist\linkedlist.cpp
+	"LinkedList.h"
+
+1454495192 c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk3\linkedlist\linkedlist.h
+	"Node.h"
+
+1454495192 c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk3\linkedlist\node.h
+	<iostream>
+
+1454522151 source:c:\users\baldurmár\dropbox\bs.c-hugb\4.önn\gagnaskipan\skilaverk3\linkedlist\linkedlist.cpp
+	"LinkedList.h"
+
