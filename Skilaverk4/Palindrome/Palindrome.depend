@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1455711212 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk4\palindrome\main.cpp
+	<iostream>
+	<cstring>
+	"palindrome.h"
+
+1455539654 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk4\palindrome\palindrome.h
+
+1455713257 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk4\palindrome\palindrome.cpp
+	"palindrome.h"
+	<iostream>
+	<cstring>
+	"palindrome.h"
+
