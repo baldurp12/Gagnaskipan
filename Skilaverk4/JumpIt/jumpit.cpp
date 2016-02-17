@@ -8,7 +8,7 @@ int cost = 0;
 int jumpIt(const int board[], int startIndex, int endIndex){
     if(startIndex >= endIndex || startIndex +1 == endIndex || startIndex +2 == endIndex){
         int sendInt = cost;
-        cost = 0;
+        cost = 0; //Skilum cost aftur sem núll;
         return sendInt + board[endIndex];
     }
 
