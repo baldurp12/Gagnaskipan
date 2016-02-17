@@ -12,8 +12,8 @@ int main() {
     int cost = jumpIt(board1, 0, 5);
     cout << "The lowest cost for board1 is: " << cost << endl;
 
-    /*jumpIt(board2, 0, 12);
-    cout << "The lowest cost for board2 is: " << cost << endl;*/
+    cost = jumpIt(board2, 0, 12);
+    cout << "The lowest cost for board2 is: " << cost << endl;
 
     cost = jumpIt(board3, 0, 4);
     cout << "The lowest cost for board3 is: " << cost << endl;
