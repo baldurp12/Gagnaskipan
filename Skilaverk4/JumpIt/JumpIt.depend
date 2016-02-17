@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1455728139 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk4\jumpit\jumpit.cpp
+	<iostream>
+	"jumpit.h"
+
+1455727537 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk4\jumpit\jumpit.h
+
+1455727646 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk4\jumpit\main.cpp
+	<iostream>
+	<cstring>
+	"jumpit.h"
+
