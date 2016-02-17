@@ -8,7 +8,7 @@ int main()
 {
     char a[] = "racecar";
     char b[] = "5885";
-    char c[] = "blalab";
+    char c[] = "a";
     if (palindrome(a, 0, strlen(a)-1)) {
         cout << a << " is a palindrome" << endl;
     }
