@@ -33,8 +33,14 @@ void Permutations::generate(int n) {
 // Prints all the permutations
 void Permutations::print() const
 {
-    // You have to implement this function.
-    // It should call the printSet function
+    unsigned int x = 1;
+    for(NodePtr iter = myPerms; iter!= NULL; iter = iter->next, x++)
+    {
+        cout << x << ": ";
+        printSet( iter->setPtr, iter->setSize);
+        cout << endl;
+    }
+    cout << endl;
 }
 
 // Private functions start here
@@ -93,6 +99,17 @@ void Permutations::insert(int num, NodePtr smaller, NodePtr& larger)
 // Recursive function that returns a list containing all of the permutations of the set
 NodePtr Permutations::permutate(int set[], int size)
 {
-    // You have to implement this function.
-    // It should call itself recursively and also call the insert function
+    if(size == 1)
+    {
+        NodePtr newNode = new Node();
+        newNode->next = NULL;
+        newNode->setPtr = new int[1];
+        newNode->setSize = 1;
+        newNode->setPtr[0] = set[0];
+        return newNode;
+    }
+    
+    NodePtr larger = NULL;
+    insert( set[size], permutate(set, size -1), larger);
+    return larger;
 }
