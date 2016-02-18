@@ -73,45 +73,33 @@ void Permutations::removeAll()
 
 void Permutations::insert(int num, NodePtr smaller, NodePtr& larger)
 {
-    /*int multiple = 1;
-    for(int factorial = 1; factorial <= num; factorial++){
-        multiple *= factorial;
-    }
-
-    larger = new Node;
-    larger->setPtr = new int[num];
-
-
-    NodePtr tempB = NULL;
-    larger->next = new Node;
-    NodePtr tempA = larger->next;
-    tempA->setPtr = new int[num];
-
-    for(int j = 1; j < multiple; j++){
-        tempB = new Node;
-        tempB->setPtr = new int[num];
-        tempA->next = tempB;
-        tempA = tempB;
-    }*/
-
 // For each permutation of the smaller list, make a permutation (pointed to by 'larger')
 // that includes the number 'num' in each position
 
 // You have to implement this function, but it is partly given below.
 
     while (smaller != NULL) { // Traverse the 'smaller' list
+
         for (int i = 0; i <= smaller->setSize; i++) { // Iterate through the set.
-            NodePtr largeNode = new Node;
-            if(large == NULL){
-                large = largeNode;
-            }
-            for(int j = 0; j<num; j++){
-
-            }
-
+            NodePtr newNode = new Node;
+            int* newSet = new int[num];
+            newNode->setPtr = newSet;
+            newNode->next = larger;
+            newNode->setSize = num;
+            larger = newNode;
 
             // Create a new set which is one larger than the current set and add 'num' in the correct pos
             // This will become part of the list pointed to by 'larger'
+
+            for(int j = 0; j < i; j++){
+                newSet[j] = smaller->setPtr[j];
+            }
+            newSet[i] = num; //who knows
+            for(int k = i +1; k <= smaller->setSize; k++) //já einmitt þetta virkar,
+            {
+                newSet[k] = smaller->setPtr[k - 1]; // after you hit i you want to move by one to the right but not out of bounds of array and copy whats left
+            }
+
 
         }
         // Delete the node we just used, and move to the next one
@@ -136,6 +124,6 @@ NodePtr Permutations::permutate(int set[], int size)
     }
 
     NodePtr larger = NULL;
-    insert( set[size], permutate(set, size -1), larger);
+    insert(size, permutate(set, size -1), larger);
     return larger;
 }
