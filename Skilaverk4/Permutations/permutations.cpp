@@ -79,7 +79,6 @@ void Permutations::insert(int num, NodePtr smaller, NodePtr& larger)
 // You have to implement this function, but it is partly given below.
 
     while (smaller != NULL) { // Traverse the 'smaller' list
-
         for (int i = 0; i <= smaller->setSize; i++) { // Iterate through the set.
             NodePtr newNode = new Node;
             int* newSet = new int[num];
@@ -87,20 +86,16 @@ void Permutations::insert(int num, NodePtr smaller, NodePtr& larger)
             newNode->next = larger;
             newNode->setSize = num;
             larger = newNode;
-
             // Create a new set which is one larger than the current set and add 'num' in the correct pos
             // This will become part of the list pointed to by 'larger'
-
             for(int j = 0; j < i; j++){
                 newSet[j] = smaller->setPtr[j];
             }
-            newSet[i] = num; //who knows
-            for(int k = i +1; k <= smaller->setSize; k++) //já einmitt þetta virkar,
+            newSet[i] = num;
+            for(int k = i +1; k <= smaller->setSize; k++)
             {
-                newSet[k] = smaller->setPtr[k - 1]; // after you hit i you want to move by one to the right but not out of bounds of array and copy whats left
+                newSet[k] = smaller->setPtr[k - 1];
             }
-
-
         }
         // Delete the node we just used, and move to the next one
         NodePtr next = smaller->next;
@@ -122,7 +117,6 @@ NodePtr Permutations::permutate(int set[], int size)
         newNode->setPtr[0] = set[0];
         return newNode;
     }
-
     NodePtr larger = NULL;
     insert(size, permutate(set, size -1), larger);
     return larger;

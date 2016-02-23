@@ -3,7 +3,7 @@
 // of a set of numbers.
 // ***************************************************************
 #include <iostream>
-#include "permutations.h"
+#include "C:\Users\baldu\Dropbox\Bs.C-Hugb\4.önn\Gagnaskipan\Verkefni\Skilaverk4\Permutations\permutations.h"
 using namespace std;
 
 int main()
