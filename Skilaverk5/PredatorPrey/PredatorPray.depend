@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1456143455 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.cpp
+	"Ant.h"
+
+1456143455 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.h
+
+1456143455 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.cpp
+	"Bug.h"
+
+1456143455 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.h
+
+1456245758 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\main.cpp
+	<iostream>
+	<ctime>
+	"World.h"
+
+1456143455 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\world.h
+	"Organism.h"
+
+1456143455 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\organism.h
+
+1456245758 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\organism.cpp
+	<iostream>
+	"Organism.h"
+	"World.h"
+
+1456247340 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\world.cpp
+	<iostream>
+	<cstdlib>
+	"World.h"
+	"Ant.h"
+	"Bug.h"
+
