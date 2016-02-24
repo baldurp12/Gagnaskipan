@@ -7,12 +7,12 @@ class Ant : public Organism
 {
 
     public:
-        Ant (World* aWorld, int xCoord, int yCoord);
+        Ant (): Organism(aWorld, xcoord, ycoord);
         void move();
         void breed();
-        virtual OrganismType getType();
-        virtual char representation();
-        virtual void generateOffspring(int whereX, int whereY);
+        OrganismType getType();
+        char representation();
+        void generateOffspring(int whereX, int whereY);
     private:
         char charRep = 'A';
 
