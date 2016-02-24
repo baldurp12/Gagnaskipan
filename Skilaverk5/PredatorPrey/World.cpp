@@ -16,7 +16,7 @@ World::World(unsigned int seed)  // default constructor: creates and initializes
         }
     }
     createOrganisms(ANT, INITIAL_ANTS); // creates the ants
-    createOrganisms(BUG, INITIAL_BUGS); // creates the bugs
+    //createOrganisms(BUG, INITIAL_BUGS); // creates the bugs
 }
 
 World::~World() { // destructor
@@ -97,6 +97,8 @@ void World::createOrganisms(OrganismType orgType, int count) { // creates count 
     // Randomly create count many organisms
 
     /*** You have to implement this function ***/
+    grid[6][6] = new Ant(this, 6, 6);
+
 }
 
 void World::resetOrganisms() {  // Reset all organisms to not moved
