@@ -1,22 +1,23 @@
 #include "Ant.h"
 
-Organism::Ant (int xcoord, int ycoord){
-    x = xcoord;
-    y = ycoord;
+void Ant::move()
+{
+    while(!moved)
+    {
+       moveRandomly();
+    }
 }
 
-void Ant::move(){
-
-}
-
-void Ant::breed(){
+void Ant::breed()
+{
 
 }
 
 OrganismType Ant::getType() const{
-
+    return ANT;
 }
 char Ant::representation() const{
+    return charRep;
 }
 
 void Ant::generateOffspring(int whereX, int whereY){

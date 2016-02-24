@@ -6,7 +6,7 @@
 class Ant : public Organism
 {
     public:
-        Ant (int xcoord, int ycoord):Organism( aWorld, xcoord, ycoord);
+    Ant(int xcoord, int ycoord):Organism( world, xcoord, ycoord) { }
         void move();
         void breed();
         virtual OrganismType getType() const;
