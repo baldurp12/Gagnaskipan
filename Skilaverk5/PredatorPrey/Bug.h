@@ -2,9 +2,11 @@
 #define BUG_H
 
 
-class Bug
+class Bug : public Organism
 {
-
+    public:
+        void move();
+        void breed();
 };
 
 #endif // BUG_H

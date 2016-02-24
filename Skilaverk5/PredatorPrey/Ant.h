@@ -2,10 +2,12 @@
 #define ANT_H
 
 
-class Ant
+class Ant : public Organism
 {
-    void move();
-    void breed();
+    public:
+        void move();
+        void breed();
+
 };
 
 #endif // ANT_H
