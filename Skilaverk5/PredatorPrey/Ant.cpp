@@ -28,5 +28,6 @@ char Ant::representation() const{
 
 void Ant::generateOffspring(int whereX, int whereY){
     Ant* newAnt = new Ant(world, whereX ,whereY);
+    newAnt=newAnt;
     breedTicks = 0;
 }

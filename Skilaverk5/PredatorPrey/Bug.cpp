@@ -24,5 +24,6 @@ char Bug::representation() const{
 
 void Bug::generateOffspring(int whereX, int whereY){
     Bug* newBug = new Bug(world, whereX ,whereY);
+    newBug = newBug;
     breedTicks = 0;
 }

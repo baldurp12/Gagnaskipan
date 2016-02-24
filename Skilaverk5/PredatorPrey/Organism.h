@@ -63,6 +63,7 @@ class Organism {
         // A pointer to the world in which this organism lives.
         World* world;
     private:
+    
 };
 
 #endif // ORGANISM_H
