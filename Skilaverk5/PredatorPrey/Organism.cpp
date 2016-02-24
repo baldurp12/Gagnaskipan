@@ -26,11 +26,28 @@ bool Organism::hasMoved() const {  // has the organism moved or not?
 // Makes a random move by calling movesTo().  Called by move() in the subclasses
 void Organism::moveRandomly()
 {
-    cout << "before moveTo function" << endl;
     /*** You have to implement this function ***/
     /* Implement 2
     */
     
+    int direction = world->randomMove();
+    
+    if((direction == UP) && (y < WORLDSIZE -1) && (world->getAt(x, y + 1) == NULL))
+    {
+        movesTo(x,y + 1);
+    }
+    else if((direction == DOWN) && (y > 0) && (world->getAt(x, y - 1) == NULL))
+    {
+         movesTo(x,y - 1);
+    }
+    else if((direction == LEFT) && (x > 0) && (world->getAt(x - 1, y) == NULL))
+    {
+         movesTo(x - 1,y);
+    }
+    else if((direction == RIGHT) && (x < WORLDSIZE -1) && (world->getAt(x + 1, y) == NULL))
+    {
+         movesTo(x + 1,y);
+    }
 }
 
 void Organism::movesTo(int xNew, int yNew) // moves the organism from coordinates (x,y) to (xNew,yNew)
@@ -55,9 +72,8 @@ void Organism::breedAtAdjacentCell()  { // breeds an organism at an adjacent cel
     
     /*** You have to implement this function ***/
     
-    int direction = world->randomMove();
     //first check if it is on the map, then check if new spot is empty and then make a babeh if spot is empty
-    if((direction == UP) && (y < WORLDSIZE -1) && (world->getAt(x, y + 1) == NULL))
+    if((y < WORLDSIZE -1) && (world->getAt(x, y + 1) == NULL))
     {
         generateOffspring(x,y + 1);
     }
