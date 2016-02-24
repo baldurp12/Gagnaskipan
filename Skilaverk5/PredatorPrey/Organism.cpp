@@ -68,8 +68,6 @@ void Organism::breedAtAdjacentCell()  { // breeds an organism at an adjacent cel
 	// Makes sure not to breed off the grid
     // This method calls the generateOffspring() method
     
-    cout << "Start Breeding" << endl;
-    
     /*** You have to implement this function ***/
     
     //first check if it is on the map, then check if new spot is empty and then make a babeh if spot is empty

@@ -132,11 +132,11 @@ void World::moveOrganism(OrganismType aType) { // Move all organisms of type aTy
     /*** You have to implement this function ***/
     for(int i = 0; i < WORLDSIZE; i++)
     {
-        for(int y = 0; y < WORLDSIZE; y++)
+        for(int j = 0; j < WORLDSIZE; j++)
         {
-            if((grid[i][y] != NULL) && !((grid[i][y]->hasMoved())) && (grid[i][y]->getType() == aType))
+            if((grid[i][j] != NULL) && !((grid[i][j]->hasMoved())) && (grid[i][j]->getType() == aType))
             {
-                grid[i][y]->move();
+                grid[i][j]->move();
             }
         }
     }
@@ -163,5 +163,14 @@ void World::breedOrganisms() { // Make the organisms breed
     // don't want to try and breed those
 
     /*** You have to implement this function ***/
+    for (int i = 0; i < WORLDSIZE; i++)
+    {
+        for (int j = 0; j < WORLDSIZE; j++)
+        {
+            if(grid[i][j] != NULL)
+                grid[i][j]->breed();
+        }
+    }
+    
 
 }
