@@ -2,12 +2,14 @@
 1456143455 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.cpp
 	"Ant.h"
 
-1456323305 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.h
+1456325350 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.h
+	"Organism.h"
 
 1456143455 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.cpp
 	"Bug.h"
 
-1456323295 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.h
+1456325279 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.h
+	"Organism.h"
 
 1456245758 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\main.cpp
 	<iostream>
@@ -19,7 +21,7 @@
 
 1456143455 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\organism.h
 
-1456245758 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\organism.cpp
+1456322976 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\organism.cpp
 	<iostream>
 	"Organism.h"
 	"World.h"
