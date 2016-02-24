@@ -4,7 +4,9 @@
 using namespace std;
 void Ant::move()
 {
-    moveRandomly();
+    while(!moved){
+        moveRandomly();
+    }
 }
 
 void Ant::breed()

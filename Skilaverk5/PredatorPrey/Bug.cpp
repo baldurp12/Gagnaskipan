@@ -3,12 +3,14 @@
 
 void Bug::move()
 {
-    moveRandomly();
+    while(!moved){
+        moveRandomly();
+    }
 }
 
 void Bug::breed()
 {
-    
+
 }
 
 OrganismType Bug::getType() const{
