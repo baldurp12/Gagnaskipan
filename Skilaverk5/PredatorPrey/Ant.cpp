@@ -13,10 +13,10 @@ void Ant::breed(){
 
 }
 
-OrganismType getType(){
+OrganismType Ant::getType() const{
 
 }
-char Ant::representation(){
+char Ant::representation() const{
 }
 
 void Ant::generateOffspring(int whereX, int whereY){

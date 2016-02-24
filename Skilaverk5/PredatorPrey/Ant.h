@@ -10,8 +10,8 @@ class Ant : public Organism
         Ant (): Organism(aWorld, xcoord, ycoord);
         void move();
         void breed();
-        OrganismType getType();
-        char representation();
+        virtual OrganismType getType() const;
+        virtual char representation() const;
         void generateOffspring(int whereX, int whereY);
     private:
         char charRep = 'A';

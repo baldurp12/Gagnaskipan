@@ -10,8 +10,8 @@ class Bug : public Organism
         Bug (World* aWorld, int xCoord, int yCoord);
         void move();
         void breed();
-        virtual OrganismType getType();
-        virtual char representation();
+        virtual OrganismType getType() const;
+        virtual char representation() const;
         virtual void generateOffspring(int whereX, int whereY);
         int resetStarveCounter();
         int getStarveCounter();
