@@ -1,11 +1,10 @@
+#include <iostream>
 #include "Ant.h"
 
+using namespace std;
 void Ant::move()
 {
-    while(!moved)
-    {
-       moveRandomly();
-    }
+    moveRandomly();
 }
 
 void Ant::breed()

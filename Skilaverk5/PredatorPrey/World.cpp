@@ -61,7 +61,7 @@ void World::display() const {
                 else if (grid[i][j]->getType() == BUG) {
                     numBugs++;
                 }
-                cout << grid[i][j]->representation();
+                cout << " " << grid[i][j]->representation() << " ";
             }
         }
         cout << endl;
@@ -98,6 +98,7 @@ void World::createOrganisms(OrganismType orgType, int count) { // creates count 
 
     /*** You have to implement this function ***/
     grid[6][6] = new Ant(this, 6, 6);
+    grid[1][4] = new Bug(this, 1, 4);
 
 }
 
@@ -108,6 +109,15 @@ void World::resetOrganisms() {  // Reset all organisms to not moved
 // to move it again when we reach it.
 
     /*** You have to implement this function ***/
+    for (int i = 0; i < WORLDSIZE; i++) {
+        for (int j = 0; j < WORLDSIZE; j++) {
+            if (grid[i][j] != NULL)
+            {
+                grid[i][j]->setMoved(false);
+            }
+        }
+    }
+
 
 }
 
@@ -116,6 +126,16 @@ void World::moveOrganism(OrganismType aType) { // Move all organisms of type aTy
     // Make sure to only move an organism if it hasn't moved already and then mark it as moved
 
     /*** You have to implement this function ***/
+    for(int i = 0; i < WORLDSIZE; i++)
+    {
+        for(int y = 0; y < WORLDSIZE; y++)
+        {
+            if((grid[i][y] != NULL) && !((grid[i][y]->hasMoved())) && (grid[i][y]->getType() == aType))
+            {
+                grid[i][y]->move();
+            }
+        }
+    }
 
 }
 

@@ -3,18 +3,20 @@
 #include "World.h"
 
 
+using namespace std;
+
 class Ant : public Organism
 {
     public:
     Ant();
     Ant(World* world, int xcoord, int ycoord):Organism( world, xcoord, ycoord) { }
-        void move();
+        virtual void move();
         void breed();
         virtual OrganismType getType() const;
         virtual char representation() const;
         void generateOffspring(int whereX, int whereY);
     private:
-        char charRep = 'A';
+        char charRep = 'o';
 
 };
 

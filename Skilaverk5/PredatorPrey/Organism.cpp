@@ -31,7 +31,7 @@ void Organism::moveRandomly()
     */
     
     int direction = world->randomMove();
-    
+
     if((direction == UP) && (y < WORLDSIZE -1) && (world->getAt(x, y + 1) == NULL))
     {
         movesTo(x,y + 1);

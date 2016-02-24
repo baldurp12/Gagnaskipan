@@ -7,8 +7,9 @@ class Bug : public Organism
 {
 
     public:
-        Bug (World* aWorld, int xCoord, int yCoord);
-        void move();
+        Bug();
+    Bug(World* world, int xcoord, int ycoord):Organism( world, xcoord, ycoord) { starveCounter = 0;}
+        virtual void move();
         void breed();
         virtual OrganismType getType() const;
         virtual char representation() const;
@@ -17,6 +18,8 @@ class Bug : public Organism
         int getStarveCounter();
     private:
         int starveCounter;
+        char charRep = 'X';
+
 
 };
 
