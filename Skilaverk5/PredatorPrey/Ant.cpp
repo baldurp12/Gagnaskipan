@@ -1,6 +1,6 @@
 #include "Ant.h"
 
-Organism::Ant (){
+Organism::Ant (int xcoord, int ycoord){
     x = xcoord;
     y = ycoord;
 }

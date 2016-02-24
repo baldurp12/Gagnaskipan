@@ -1,6 +1,6 @@
 #ifndef BUG_H
 #define BUG_H
-#include "Organism.h"
+#include "World.h"
 
 
 class Bug : public Organism
