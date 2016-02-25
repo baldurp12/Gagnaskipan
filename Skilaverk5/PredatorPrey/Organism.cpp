@@ -29,7 +29,7 @@ void Organism::moveRandomly()
     /*** You have to implement this function ***/
     /* Implement 2
     */
-    
+
     int direction = world->randomMove();
 
     if((direction == UP) && (y < WORLDSIZE -1) && (world->getAt(x, y + 1) == NULL))
@@ -57,19 +57,20 @@ void Organism::movesTo(int xNew, int yNew) // moves the organism from coordinate
     world->setAt(xNew, yNew, this); // move organism to the new spot
     world->setAt(x,y,NULL); // change the old spot to empty space
     setMoved(true); // just to make sure we know it has been moved
-    
+
     // organism new house/home
     x = xNew;
     y = yNew;
 }
 
-void Organism::breedAtAdjacentCell()  { // breeds an organism at an adjacent cell
+void Organism::breedAtAdjacentCell()  {
+    // breeds an organism at an adjacent cell
 	// Tries to produce one new organism in UP, DOWN, LEFT, or RIGHT cell (in that order)
 	// Makes sure not to breed off the grid
     // This method calls the generateOffspring() method
-    
+
     /*** You have to implement this function ***/
-    
+
     //first check if it is on the map, then check if new spot is empty and then make a babeh if spot is empty
     if((y < WORLDSIZE -1) && (world->getAt(x, y + 1) == NULL))
     {
@@ -87,8 +88,10 @@ void Organism::breedAtAdjacentCell()  { // breeds an organism at an adjacent cel
     {
         generateOffspring(x + 1,y);
     }
+
 }
 
 bool Organism::isDead() const { // Returns true if organism is dead, false otherwise.
+    cout << "This should not happen" << endl;
     return false;
 }

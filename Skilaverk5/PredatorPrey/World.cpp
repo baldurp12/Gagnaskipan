@@ -79,7 +79,7 @@ void World::simulateOneStep() {
     moveOrganism(BUG);    // Move the bugs
     moveOrganism(ANT);    // Move the ants
     cleanup();            // Make the bugs starve
-    breedOrganisms();     // Make them breed
+    //breedOrganisms();     // Make them breed
 }
 
 
@@ -97,11 +97,14 @@ void World::createOrganisms(OrganismType orgType, int count) { // creates count 
     // Randomly create count many organisms
 
     /*** You have to implement this function ***/
-    if(orgType == ANT){
+    /*if(orgType == ANT){
         grid[6][6] = new Ant(this, 6, 6);
-    }
+    }*/
     if(orgType == BUG){
         grid[1][4] = new Bug(this, 1, 4);
+        grid[1][5] = new Bug(this, 1, 5);
+        grid[1][6] = new Bug(this, 1, 6);
+        grid[1][7] = new Bug(this, 1, 7);
     }
 
 }
@@ -125,7 +128,8 @@ void World::resetOrganisms() {  // Reset all organisms to not moved
 
 }
 
-void World::moveOrganism(OrganismType aType) { // Move all organisms of type aType
+void World::moveOrganism(OrganismType aType) {
+    // Move all organisms of type aType
     // Loop through cells in order and move if it's a organism of type aType
     // Make sure to only move an organism if it hasn't moved already and then mark it as moved
 
@@ -171,6 +175,6 @@ void World::breedOrganisms() { // Make the organisms breed
                 grid[i][j]->breed();
         }
     }
-    
+
 
 }

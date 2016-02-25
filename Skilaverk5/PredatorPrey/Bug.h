@@ -1,6 +1,8 @@
 #ifndef BUG_H
 #define BUG_H
 #include "World.h"
+#include <iostream>
+using namespace std;
 
 
 class Bug : public Organism
@@ -16,8 +18,10 @@ class Bug : public Organism
         virtual void generateOffspring(int whereX, int whereY);
         int resetStarveCounter();
         int getStarveCounter();
+        bool isDead();
     private:
-        int starveCounter;
+        bool dead = false;
+        int starveCounter=0;
         char charRep = 'X';
 
 

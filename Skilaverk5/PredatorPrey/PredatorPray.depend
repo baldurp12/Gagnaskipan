@@ -1,33 +1,34 @@
 # depslib dependency file v1.0
-1456331533 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.cpp
+1456339926 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.cpp
 	<iostream>
 	"Ant.h"
 
 1456331084 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.h
 	"World.h"
 
-1456331565 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.cpp
+1456414594 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.cpp
 	"Bug.h"
 
-1456331084 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.h
+1456414901 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.h
 	"World.h"
+	<iostream>
 
-1456245758 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\main.cpp
+1456414375 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\main.cpp
 	<iostream>
 	<ctime>
 	"World.h"
 
-1456143455 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\world.h
+1456413055 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\world.h
 	"Organism.h"
 
-1456143455 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\organism.h
+1456337483 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\organism.h
 
-1456331084 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\organism.cpp
+1456414781 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\organism.cpp
 	<iostream>
 	"Organism.h"
 	"World.h"
 
-1456332184 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\world.cpp
+1456414375 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\world.cpp
 	<iostream>
 	<cstdlib>
 	"World.h"

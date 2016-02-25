@@ -5,14 +5,14 @@ using namespace std;
 
 int main()
 {
-    World myWorld(time(0));
+    World myWorld(1234);
 
     myWorld.display();
 
     char ch;
     cin.get(ch);
 
-    while (ch != 'q') {   // q for quit
+    while (ch != 'q') {
         myWorld.simulateOneStep();
         myWorld.display();
         cin.get(ch);
