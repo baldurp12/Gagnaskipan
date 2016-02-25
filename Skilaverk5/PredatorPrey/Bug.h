@@ -18,7 +18,7 @@ class Bug : public Organism
         virtual void generateOffspring(int whereX, int whereY);
         int resetStarveCounter();
         int getStarveCounter();
-        bool isDead();
+        virtual bool isDead() const;
     private:
         bool dead = false;
         int starveCounter=0;

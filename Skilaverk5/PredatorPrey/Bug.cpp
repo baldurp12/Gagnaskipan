@@ -9,7 +9,6 @@ void Bug::move()
     breedTicks++;
     starveCounter++;
     if(getStarveCounter() >= STARVE_BUGS){
-            cout << "bug died" << endl;
         dead = true;
     }
 }
@@ -28,13 +27,12 @@ char Bug::representation() const{
 }
 
 void Bug::generateOffspring(int whereX, int whereY){
-    cout << "trying to breed a bug at X: " << whereX << "  " << "Y: " << whereY << endl;
     Bug* newBug = new Bug(world, whereX ,whereY);
     newBug = newBug;
     breedTicks = 0;
 }
 
-bool Bug::isDead(){
+bool Bug::isDead() const{
     return dead;
 }
 

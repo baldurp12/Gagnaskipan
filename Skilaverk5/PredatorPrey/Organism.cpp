@@ -78,7 +78,7 @@ void Organism::breedAtAdjacentCell()  {
     }
     else if((y > 0) && (world->getAt(x, y - 1) == NULL)) // Same as the one above
     {
-        generateOffspring(x,y + 1);
+        generateOffspring(x,y - 1);
     }
     else if((x > 0) && (world->getAt(x - 1, y) == NULL)) // Still the same
     {
@@ -92,6 +92,5 @@ void Organism::breedAtAdjacentCell()  {
 }
 
 bool Organism::isDead() const { // Returns true if organism is dead, false otherwise.
-    cout << "This should not happen" << endl;
     return false;
 }
