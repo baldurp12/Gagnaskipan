@@ -3,37 +3,26 @@
 
 void Bug::move()
 {
-    if((y < WORLDSIZE -1 ) && (world->getAt(x, y+1)->getType() == ANT)){
+    Organism* org;
+    if((y < WORLDSIZE) && ((org = world->getAt(x, y+1)) != NULL) && (org->getType() == ANT)){
         delete world->getAt(x, y+1);
-        world->setAt(x, y+1, this);
-        world->setAt(x, y, NULL);
+        movesTo(x,x+1);
         starveCounter = 0;
-        breedTicks++;
-        setMoved(true);
     }
-    else if((y > 0) && (world->getAt(x, y-1)->getType() == ANT)){
+    else if((y > 0) && ((org = world->getAt(x, y-1)) != NULL) && (org->getType() == ANT)){
         delete world->getAt(x, y-1);
-        world->setAt(x, y-1, this);
-        world->setAt(x, y, NULL);
-        setMoved(true);
+        movesTo(x,y-1);
         starveCounter = 0;
-        breedTicks++;
     }
-    else if((x > 0) && (world->getAt(x-1, y)->getType() == ANT)){
+    else if((x > 0) && ((org = world->getAt(x-1, y)) != NULL) && (org->getType() == ANT)){
         delete world->getAt(x-1, y);
-        world->setAt(x-1, y, this);
-        world->setAt(x, y, NULL);
-        setMoved(true);
+        world->setAt(x,y,NULL);
         starveCounter = 0;
-        breedTicks++;
     }
-    else if((x < WORLDSIZE -1) && (world->getAt(x+1, y)->getType() == ANT)){
+    else if((x < WORLDSIZE) && ((org = world->getAt(x+1, y)) != NULL) && (org->getType() == ANT)){
         delete world->getAt(x+1, y);
-        world->setAt(x+1, y, this);
-        world->setAt(x, y, NULL);
-        setMoved(true);
+        movesTo(x+1,y);
         starveCounter = 0;
-        breedTicks++;
     }
     else{
         while(!moved){
