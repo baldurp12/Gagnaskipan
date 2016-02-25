@@ -18,7 +18,7 @@ class Ant : public Organism
         virtual void generateOffspring(int whereX, int whereY);
         virtual bool isDead() const;
     private:
-        bool dead;
+        bool dead = false;
         char charRep = 'o';
 
 };
