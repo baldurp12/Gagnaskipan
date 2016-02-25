@@ -35,7 +35,7 @@ void Organism::moveRandomly()
     switch(direction)
     {
         case UP:
-            if((y < WORLDSIZE) && (world->getAt(x, y + 1) == NULL))
+            if((y < WORLDSIZE-1) && (world->getAt(x, y + 1) == NULL))
             {
                 movesTo(x,y + 1);
             }
@@ -53,7 +53,7 @@ void Organism::moveRandomly()
             }
             break;
         case RIGHT:
-            if((direction == RIGHT) && (x < WORLDSIZE) && (world->getAt(x + 1, y) == NULL))
+            if((direction == RIGHT) && (x < WORLDSIZE-1) && (world->getAt(x + 1, y) == NULL))
             {
                 movesTo(x + 1,y);
             }
