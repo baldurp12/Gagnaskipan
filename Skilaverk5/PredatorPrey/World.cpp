@@ -23,6 +23,16 @@ World::~World() { // destructor
     // Deallocate memory allocated to organisms
 
     /*** You have to implement this function ***/
+    for(int i = 0; i < WORLDSIZE; i++)
+        {
+        for(int j = 0; j < WORLDSIZE; j++)
+        {
+            if(grid[i][j] != NULL)
+            {
+                delete grid[i][j];
+            }
+        }
+    }
 }
 
 // Return the organism at the given coordinates
@@ -116,13 +126,13 @@ void World::createOrganisms(OrganismType orgType, int count) { // creates count 
                 while(grid[xCoord][yCoord] != NULL){
                     randomPosition(xCoord,yCoord);
                 }
-                
+
                 grid[xCoord][yCoord] = new Bug(this, xCoord,yCoord);
             }
         }
     }
 
-    
+
     // Randomly create count many organisms
     /*** You have to implement this function ***/
 
@@ -135,8 +145,10 @@ void World::resetOrganisms() {  // Reset all organisms to not moved
 // to move it again when we reach it.
 
     /*** You have to implement this function ***/
-    for (int i = 0; i < WORLDSIZE; i++) {
-        for (int j = 0; j < WORLDSIZE; j++) {
+    for (int i = 0; i < WORLDSIZE; i++)
+        {
+        for (int j = 0; j < WORLDSIZE; j++)
+        {
             if (grid[i][j] != NULL)
             {
                 grid[i][j]->setMoved(false);
@@ -153,9 +165,9 @@ void World::moveOrganism(OrganismType aType) {
     // Make sure to only move an organism if it hasn't moved already and then mark it as moved
 
     /*** You have to implement this function ***/
-    for(int i = 0; i < WORLDSIZE; i++)
+    for (int i = 0; i < WORLDSIZE; i++)
     {
-        for(int j = 0; j < WORLDSIZE; j++)
+        for (int j = 0; j < WORLDSIZE; j++)
         {
             if((grid[i][j] != NULL) && !((grid[i][j]->hasMoved())) && (grid[i][j]->getType() == aType))
             {
@@ -163,7 +175,6 @@ void World::moveOrganism(OrganismType aType) {
             }
         }
     }
-
 }
 
 // Remove all dead organisms from this world.

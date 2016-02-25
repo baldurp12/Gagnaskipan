@@ -11,7 +11,7 @@ class Ant : public Organism
     Ant();
     Ant(World* world, int xcoord, int ycoord):Organism( world, xcoord, ycoord) { }
         virtual void move();
-        void breed();
+        virtual void breed();
         virtual OrganismType getType() const;
         virtual char representation() const;
         void generateOffspring(int whereX, int whereY);

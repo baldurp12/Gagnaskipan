@@ -4,9 +4,8 @@
 using namespace std;
 void Ant::move()
 {
-    while(!moved){
+
         moveRandomly();
-    }
     breedTicks++;
 }
 

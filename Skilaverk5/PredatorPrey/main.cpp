@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    World myWorld(time(0));
+    World myWorld(1234);
 
     myWorld.display();
 

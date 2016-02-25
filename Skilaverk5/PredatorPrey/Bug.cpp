@@ -25,9 +25,8 @@ void Bug::move()
         starveCounter = 0;
     }
     else{
-        while(!moved){
             moveRandomly();
-        }
+
         breedTicks++;
         starveCounter++;
         if(getStarveCounter() >= STARVE_BUGS){
