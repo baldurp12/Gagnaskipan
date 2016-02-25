@@ -31,22 +31,34 @@ void Organism::moveRandomly()
     */
 
     int direction = world->randomMove();
-
-    if((direction == UP) && (y < WORLDSIZE -1) && (world->getAt(x, y + 1) == NULL))
+    
+    switch(direction)
     {
-        movesTo(x,y + 1);
-    }
-    else if((direction == DOWN) && (y > 0) && (world->getAt(x, y - 1) == NULL))
-    {
-         movesTo(x,y - 1);
-    }
-    else if((direction == LEFT) && (x > 0) && (world->getAt(x - 1, y) == NULL))
-    {
-         movesTo(x - 1,y);
-    }
-    else if((direction == RIGHT) && (x < WORLDSIZE -1) && (world->getAt(x + 1, y) == NULL))
-    {
-         movesTo(x + 1,y);
+        case UP:
+            if((y < WORLDSIZE) && (world->getAt(x, y + 1) == NULL))
+            {
+                movesTo(x,y + 1);
+            }
+            break;
+        case DOWN:
+            if((y > 0) && (world->getAt(x, y - 1) == NULL))
+            {
+                movesTo(x,y - 1);
+            }
+            break;
+        case LEFT:
+            if((x > 0) && (world->getAt(x - 1, y) == NULL))
+            {
+                movesTo(x - 1,y);
+            }
+            break;
+        case RIGHT:
+            if((direction == RIGHT) && (x < WORLDSIZE) && (world->getAt(x + 1, y) == NULL))
+            {
+                movesTo(x + 1,y);
+            }
+            break;
+            
     }
 }
 
