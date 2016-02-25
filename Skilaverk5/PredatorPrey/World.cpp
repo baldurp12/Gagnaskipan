@@ -95,7 +95,7 @@ Move World::randomMove() const {
 /********* Private functions *********/
 void World::createOrganisms(OrganismType orgType, int count) { // creates count organisms of type orgType
     int xCoord = 0, yCoord = 0;
-    for(int i = count; i >= 0; i--){
+    for(int i = count; i > 0; i--){
         randomPosition(xCoord,yCoord);
         if(orgType == ANT){
             if(getAt(xCoord,yCoord) == NULL){

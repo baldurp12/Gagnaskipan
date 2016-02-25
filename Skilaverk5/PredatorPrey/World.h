@@ -15,7 +15,7 @@ const int INITIAL_ANTS = 100;
 const int INITIAL_BUGS = 5;
 
 // Time steps between breeding of ants
-const int BREED_ANTS = 0;
+const int BREED_ANTS = 3;
 
 // Time steps between breeding of bugs
 const int BREED_BUGS = 8;
