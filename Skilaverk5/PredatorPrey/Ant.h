@@ -10,11 +10,12 @@ class Ant : public Organism
     public:
     Ant();
     Ant(World* world, int xcoord, int ycoord):Organism( world, xcoord, ycoord) { }
+    ~Ant();
         virtual void move();
         virtual void breed();
         virtual OrganismType getType() const;
         virtual char representation() const;
-        void generateOffspring(int whereX, int whereY);
+        virtual void generateOffspring(int whereX, int whereY);
         virtual bool isDead() const;
     private:
         bool dead;

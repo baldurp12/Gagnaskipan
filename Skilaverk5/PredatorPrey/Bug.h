@@ -11,6 +11,7 @@ class Bug : public Organism
     public:
         Bug();
         Bug(World* world, int xcoord, int ycoord):Organism( world, xcoord, ycoord) { starveCounter = 0;}
+        ~Bug();
         virtual void move();
         virtual void breed();
         virtual OrganismType getType() const;

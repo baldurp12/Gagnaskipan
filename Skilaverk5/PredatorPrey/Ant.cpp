@@ -2,6 +2,9 @@
 #include "Ant.h"
 
 using namespace std;
+
+Ant::~Ant(){}
+
 void Ant::move()
 {
 
@@ -29,6 +32,6 @@ char Ant::representation() const{
 }
 
 void Ant::generateOffspring(int whereX, int whereY){
-    Ant* newAnt = new Ant(world, whereX ,whereY);
+    new Ant(world, whereX ,whereY);
     breedTicks = 0;
 }

@@ -62,7 +62,7 @@ void World::display() const {
     for (int j = 0; j < WORLDSIZE; j++) {
         for (int i = 0; i < WORLDSIZE; i++) {
             if (grid[i][j] == NULL) {
-                cout << " . ";                  /**** Muna að taka út bilin hérna !****/
+                cout << ".";                  /**** Muna að taka út bilin hérna !****/
             }
             else {
                 if (grid[i][j]->getType() == ANT) {
@@ -71,13 +71,12 @@ void World::display() const {
                 else if (grid[i][j]->getType() == BUG) {
                     numBugs++;
                 }
-                cout << " " << grid[i][j]->representation() << " ";
+                cout << grid[i][j]->representation();
             }
         }
         cout << endl;
     }
     cout << "Ants: " << numAnts << " Bugs: " << numBugs << endl << endl;
-    cout << randomMove() << endl;
 }
 
 void World::simulateOneStep() {

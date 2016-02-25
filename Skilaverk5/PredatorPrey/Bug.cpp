@@ -1,6 +1,9 @@
 #include "Bug.h"
 
 
+
+Bug::~Bug(){}
+
 void Bug::move()
 {
     Organism* org;
@@ -49,7 +52,7 @@ char Bug::representation() const{
 }
 
 void Bug::generateOffspring(int whereX, int whereY){
-    Bug* newBug = new Bug(world, whereX ,whereY);
+    new Bug(world, whereX ,whereY);
     breedTicks = 0;
 }
 

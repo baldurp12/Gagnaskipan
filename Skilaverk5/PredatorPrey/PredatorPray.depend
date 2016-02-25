@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1456425838 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.cpp
+1456427271 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.cpp
 	<iostream>
 	"Ant.h"
 
-1456418213 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.h
+1456427271 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\ant.h
 	"World.h"
 
-1456425838 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.cpp
+1456427271 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.cpp
 	"Bug.h"
 
-1456426221 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.h
+1456427271 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\bug.h
 	"World.h"
 	<iostream>
 
@@ -18,7 +18,7 @@
 	<ctime>
 	"World.h"
 
-1456425678 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\world.h
+1456427313 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\world.h
 	"Organism.h"
 
 1456337483 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\organism.h
@@ -28,7 +28,7 @@
 	"Organism.h"
 	"World.h"
 
-1456426080 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\world.cpp
+1456427346 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk5\predatorprey\world.cpp
 	<iostream>
 	<cstdlib>
 	"World.h"

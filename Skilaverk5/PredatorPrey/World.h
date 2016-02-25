@@ -15,10 +15,10 @@ const int INITIAL_ANTS = 100;
 const int INITIAL_BUGS = 5;
 
 // Time steps between breeding of ants
-const int BREED_ANTS = 300;
+const int BREED_ANTS = 3;
 
 // Time steps between breeding of bugs
-const int BREED_BUGS = 800;
+const int BREED_BUGS = 8;
 
 // Time steps until bugs die if they have not eaten
 const int STARVE_BUGS = 3;
