@@ -10,7 +10,7 @@ class Ant : public Organism
     public:
     Ant();
     Ant(World* world, int xcoord, int ycoord):Organism( world, xcoord, ycoord) { }
-    ~Ant();
+    virtual ~Ant();
         virtual void move();
         virtual void breed();
         virtual OrganismType getType() const;
