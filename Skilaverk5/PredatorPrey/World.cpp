@@ -101,9 +101,22 @@ void World::createOrganisms(OrganismType orgType, int count) { // creates count 
             if(getAt(xCoord,yCoord) == NULL){
                 grid[xCoord][yCoord] = new Ant(this, xCoord,yCoord);
             }
+            else{
+                while(grid[xCoord][yCoord] != NULL){
+                    randomPosition(xCoord,yCoord);
+                }
+                grid[xCoord][yCoord] = new Ant(this, xCoord,yCoord);
+            }
         }
         else if(orgType == BUG){
             if(getAt(xCoord,yCoord) == NULL){
+                grid[xCoord][yCoord] = new Bug(this, xCoord,yCoord);
+            }
+            else{
+                while(grid[xCoord][yCoord] != NULL){
+                    randomPosition(xCoord,yCoord);
+                }
+                
                 grid[xCoord][yCoord] = new Bug(this, xCoord,yCoord);
             }
         }
