@@ -95,36 +95,27 @@ Move World::randomMove() const {
 /********* Private functions *********/
 void World::createOrganisms(OrganismType orgType, int count) { // creates count organisms of type orgType
     int xCoord = 0, yCoord = 0;
-    for(int i = count; i > 0; i--){
+    int orgCounter = 0;
+    while(orgCounter < count)
+    {
         randomPosition(xCoord,yCoord);
-        if(orgType == ANT){
-            if(getAt(xCoord,yCoord) == NULL){
+        if(orgType == ANT)
+        {
+            if(getAt(xCoord,yCoord) == NULL)
+            {
                 grid[xCoord][yCoord] = new Ant(this, xCoord,yCoord);
-            }
-            else{
-                while(grid[xCoord][yCoord] != NULL){
-                    randomPosition(xCoord,yCoord);
-                }
-                grid[xCoord][yCoord] = new Ant(this, xCoord,yCoord);
+                orgCounter++;
             }
         }
-        else if(orgType == BUG){
-            if(getAt(xCoord,yCoord) == NULL){
+        else if(orgType == BUG)
+        {
+            if(getAt(xCoord,yCoord) == NULL)
+            {
                 grid[xCoord][yCoord] = new Bug(this, xCoord,yCoord);
-            }
-            else{
-                while(grid[xCoord][yCoord] != NULL){
-                    randomPosition(xCoord,yCoord);
-                }
-                
-                grid[xCoord][yCoord] = new Bug(this, xCoord,yCoord);
+                orgCounter++;
             }
         }
     }
-
-    
-    // Randomly create count many organisms
-    /*** You have to implement this function ***/
 
 }
 
