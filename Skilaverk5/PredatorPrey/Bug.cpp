@@ -7,29 +7,32 @@ Bug::~Bug(){}
 void Bug::move()
 {
     Organism* org;
-    if((y < WORLDSIZE) && ((org = world->getAt(x, y+1)) != NULL) && (org->getType() == ANT)){
+    if((org = world->getAt(x, y+1)) != NULL && org->getType() == ANT){
         delete world->getAt(x, y+1);
-        movesTo(x,x+1);
+        movesTo(x, y+1);
         starveCounter = 0;
+        breedTicks++;
     }
-    else if((y > 0) && ((org = world->getAt(x, y-1)) != NULL) && (org->getType() == ANT)){
+    else if((org = world->getAt(x, y-1)) != NULL && org->getType() == ANT){
         delete world->getAt(x, y-1);
-        movesTo(x,y-1);
+        movesTo(x, y-1);
         starveCounter = 0;
+        breedTicks++;
     }
-    else if((x > 0) && ((org = world->getAt(x-1, y)) != NULL) && (org->getType() == ANT)){
+    else if((org = world->getAt(x-1, y)) != NULL && org->getType() == ANT){
         delete world->getAt(x-1, y);
-        world->setAt(x,y,NULL);
+        movesTo(x-1, y);
         starveCounter = 0;
+        breedTicks++;
     }
-    else if((x < WORLDSIZE) && ((org = world->getAt(x+1, y)) != NULL) && (org->getType() == ANT)){
+    else if((org = world->getAt(x+1, y)) != NULL && org->getType() == ANT){
         delete world->getAt(x+1, y);
-        movesTo(x+1,y);
+        movesTo(x+1, y);
         starveCounter = 0;
+        breedTicks++;
     }
     else{
-            moveRandomly();
-
+        moveRandomly();
         breedTicks++;
         starveCounter++;
         if(getStarveCounter() >= STARVE_BUGS){

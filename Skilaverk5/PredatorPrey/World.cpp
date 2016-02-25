@@ -62,7 +62,7 @@ void World::display() const {
     for (int j = 0; j < WORLDSIZE; j++) {
         for (int i = 0; i < WORLDSIZE; i++) {
             if (grid[i][j] == NULL) {
-                cout << ".";                  /**** Muna að taka út bilin hérna !****/
+                cout << ".";
             }
             else {
                 if (grid[i][j]->getType() == ANT) {
@@ -159,7 +159,9 @@ void World::moveOrganism(OrganismType aType) {
     {
         for (int j = 0; j < WORLDSIZE; j++)
         {
-            if((grid[i][j] != NULL) && !((grid[i][j]->hasMoved())) && (grid[i][j]->getType() == aType))
+            if (grid[i][j] != NULL) {
+            }
+            if(grid[i][j] != NULL && !grid[i][j]->hasMoved() && grid[i][j]->getType() == aType)
             {
                 grid[i][j]->move();
             }
