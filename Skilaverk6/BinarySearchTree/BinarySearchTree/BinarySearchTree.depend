@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1457532578 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarytree.cpp
+1457549861 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarytree.cpp
 	<iostream>
 	<algorithm>
 	"binarytree.h"
@@ -14,7 +14,7 @@
 	<iostream>
 	"binarysearchtree.cpp"
 
-1457549861 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarysearchtree.cpp
+1457556690 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarysearchtree.cpp
 	"binarysearchtree.h"
 	"binarytree.cpp"
 
@@ -26,7 +26,7 @@
 	<algorithm>
 	"binarytree.h"
 
-1457543968 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarysearchtree.cpp
+1457556527 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarysearchtree.cpp
 	"binarysearchtree.h"
 	"binarytree.cpp"
 

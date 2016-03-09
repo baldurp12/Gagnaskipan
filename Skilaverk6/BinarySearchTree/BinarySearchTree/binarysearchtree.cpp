@@ -47,15 +47,16 @@ template <class T>
 BinaryNode<T>* BinarySearchTree<T>::maxNode(BinaryNode<T>* node) const
 {
     if(node == NULL)
+    {
         return NULL;
+    }
+    else if(node->rightChild == NULL ){
+        return node;
+    }
     else
     {
-        BinaryNode<T>* current = node;
-        while (current->rightChild != NULL)
-            current = current->rightChild;
-        return current;
+        return maxNode(node->rightChild);
     }
-
 }
 
 template <class T>
@@ -65,14 +66,13 @@ BinaryNode<T>* BinarySearchTree<T>::minNode(BinaryNode<T>* node) const
     {
         return NULL;
     }
+    else if(node->leftChild == NULL ){
+        return node;
+    }
     else
     {
-        BinaryNode<T>* current = node;
-        while(current->leftChild != NULL)
-            current = current->leftChild;
-        return current;
+        return minNode(node->leftChild);
     }
-
 }
 
 template <class T>
@@ -95,7 +95,10 @@ void BinarySearchTree<T>::insertAt(BinaryNode<T>*& node, const T& anItem)
 template <class T>
 void BinarySearchTree<T>::removeAt(BinaryNode<T>*& node, const T& anItem)
 {
-    if (anItem == node->item) { // Then found
+    if(node == NULL){
+        //Víí
+    }
+    else if (anItem == node->item) { // Then found
         removeNode(node);
     }
     else if (anItem < node->item) {  // Search in the left tree
@@ -103,7 +106,8 @@ void BinarySearchTree<T>::removeAt(BinaryNode<T>*& node, const T& anItem)
     }
     else {                            // Search in the right tree
         removeAt(node->rightChild, anItem);
-    }}
+    }
+}
 
 template <class T>
 void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
@@ -115,27 +119,40 @@ void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
     }
     else if(node->leftChild == NULL)
     {
-        node = node->rightChild;
+        BinaryNode<T>* tempDel = node->rightChild;
+        delete node;
+        node = tempDel;
     }
     else if(node->rightChild == NULL)
     {
-        node = node->leftChild;
+        BinaryNode<T>* tempDel = node->leftChild;
+        delete node;
+        node = tempDel;
     }
     else
     {
         node->item = processLeftmost(node->rightChild);
-        cout << "Should have listened to your mom" << endl;
     }
 }
 
 template <class T>
 T BinarySearchTree<T>::processLeftmost(BinaryNode<T>*& node)
 {
-    BinaryNode<T>* temp = new BinaryNode<T>;
+/*  BinaryNode<T>* temp = new BinaryNode<T>;
     temp = minNode(node);
     T tempItem = temp->item;
     delete temp;
-    return tempItem;
+    return tempItem
+*/
+
+    if(node->leftChild != NULL){
+        return processLeftmost(node->leftChild);
+    }
+    else {
+        T tempItem = node->item;
+        removeNode(node);
+        return tempItem;
+    }
 }
 
 template <class T>
