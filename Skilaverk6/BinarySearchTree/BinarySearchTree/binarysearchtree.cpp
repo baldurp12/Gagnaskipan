@@ -16,60 +16,62 @@ BinarySearchTree<T>::~BinarySearchTree()
 {
 }
 
-BinaryNode* BinarySearchTree::maxNode() const
-{
-
-}
-
-BinaryNode* BinarySearchTree::minNode() const
+template <class T>
+BinaryNode<T>* BinarySearchTree<T>::maxNode() const
 {
 
 }
 
 template <class T>
-void BinarySearchTree::insert(const T& anItem)
+BinaryNode<T>* BinarySearchTree<T>::minNode() const
 {
 
 }
 
 template <class T>
-void BinarySearchTree::remove(const T& anItem)
+void BinarySearchTree<T>::insert(const T& anItem)
 {
 
 }
 
 template <class T>
-BinaryNode* BinarySearchTree::maxNode(BinaryNode<T>* node) const
+void BinarySearchTree<T>::remove(const T& anItem)
 {
 
 }
 
 template <class T>
-BinaryNode* BinarySearchTree::minNode(BinaryNode<T>* node) const
+BinaryNode<T>* BinarySearchTree<T>::maxNode(BinaryNode<T>* node) const
 {
 
 }
 
 template <class T>
-void BinarySearchTree::insertAt(BinaryNode<T>*& node, const T& anItem)
+BinaryNode<T>* BinarySearchTree<T>::minNode(BinaryNode<T>* node) const
 {
 
 }
 
 template <class T>
-void BinarySearchTree::removeAt(BinaryNode<T>*& node, const T& anItem)
+void BinarySearchTree<T>::insertAt(BinaryNode<T>*& node, const T& anItem)
 {
 
 }
 
 template <class T>
-void BinarySearchTree::removeNode(BinaryNode<T>*& node)
+void BinarySearchTree<T>::removeAt(BinaryNode<T>*& node, const T& anItem)
 {
 
 }
 
 template <class T>
-T BinarySearchTree::processLeftmost(BinaryNode<T>*& node)
+void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
+{
+
+}
+
+template <class T>
+T BinarySearchTree<T>::processLeftmost(BinaryNode<T>*& node)
 {
 
 }
