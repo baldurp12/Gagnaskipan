@@ -99,7 +99,6 @@ template <class T>
 void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
 {
     cout << "Attempted to remove " << node->item << endl;
-
     if(node->isLeaf())
     {
         delete node;
@@ -118,7 +117,7 @@ void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
     }
     else
     {
-        //node->item = processLeftmost(node->rightChild);
+        //node->item = processLeftmost(node->leftChild);
         cout << "Should have listened to your mom" << endl;
     }
 }
@@ -126,7 +125,7 @@ void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
 template <class T>
 T BinarySearchTree<T>::processLeftmost(BinaryNode<T>*& node)
 {
-
+    
 }
 
 template <class T>
