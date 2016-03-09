@@ -27,3 +27,8 @@ Thumbs.db
 *.plist
 *.xcworkspacedata
 *.xcuserstate
+
+
+# Weird files #
+###############
+*.layout
