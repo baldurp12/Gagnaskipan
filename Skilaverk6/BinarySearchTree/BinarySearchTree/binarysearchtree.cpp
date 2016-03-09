@@ -22,13 +22,13 @@ BinarySearchTree<T>::~BinarySearchTree()
 template <class T>
 BinaryNode<T>* BinarySearchTree<T>::maxNode() const
 {
-    return NULL;
+    return maxNode(this->root);
 }
 
 template <class T>
 BinaryNode<T>* BinarySearchTree<T>::minNode() const
 {
-    return NULL;
+    return minNode(this->root);
 }
 
 template <class T>
@@ -46,13 +46,19 @@ void BinarySearchTree<T>::remove(const T& anItem)
 template <class T>
 BinaryNode<T>* BinarySearchTree<T>::maxNode(BinaryNode<T>* node) const
 {
-
+    BinaryNode<T>* current = node;
+    while (current->rightChild != NULL)
+        current = current->rightChild;
+    return current;
 }
 
 template <class T>
 BinaryNode<T>* BinarySearchTree<T>::minNode(BinaryNode<T>* node) const
 {
-
+    BinaryNode<T>* current = node;
+    while(current->leftChild != NULL)
+        current = current->leftChild;
+    return current;
 }
 
 template <class T>
