@@ -62,7 +62,7 @@ int main() {
         cout << "Smallest item in the BST is: " << node->item << endl;
     }
 
-    bst.remove(4);
+    //bst.remove(4);
     cout << "Inorder after first remove: ";
     bst.inorder();
     cout << endl;

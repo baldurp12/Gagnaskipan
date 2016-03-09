@@ -95,32 +95,28 @@ template <class T>
 void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
 {
     cout << "Attempted to remove " << node->item << endl;
+    BinaryNode<T>* remNode = node;
     if(node->isLeaf())
     {
-        delete node;
+        node = NULL;
         cout << "Node was a leaf and has been terminated" << endl;
     }
     else if(node->leftChild == NULL)
     {
-        BinaryNode<T>* remNode = new BinaryNode<T>;
-        remNode = node;
         node = node->rightChild;
-        delete remNode;
         cout << "rightChild was removed" << endl;
     }
     else if(node->rightChild == NULL)
     {
-        BinaryNode<T>* remNode = new BinaryNode<T>;
-        remNode = node;
         node = node->leftChild;
-        delete remNode;
         cout << "leftChild was removed" << endl;
     }
     else
     {
         //node->item = processLeftmost(node->rightChild);
-        cout << "Shoulde have listened to your mom" << endl;
+        cout << "Should have listened to your mom" << endl;
     }
+    delete remNode;
 }
 
 template <class T>
