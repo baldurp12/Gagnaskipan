@@ -117,11 +117,11 @@ void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
 template <class T>
 T BinarySearchTree<T>::processLeftmost(BinaryNode<T>*& node)
 {
-    while(node->leftChild != NULL)
-        node = node->leftChild;
-    T temp = node->item;
-    delete node;
-    return temp;
+    BinaryNode<T>* temp = new BinaryNode<T>;
+    temp = minNode(node);
+    T tempItem = temp->item;
+    delete temp;
+    return tempItem;
 }
 
 template <class T>
