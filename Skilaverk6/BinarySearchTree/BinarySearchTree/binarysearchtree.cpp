@@ -46,19 +46,33 @@ void BinarySearchTree<T>::remove(const T& anItem)
 template <class T>
 BinaryNode<T>* BinarySearchTree<T>::maxNode(BinaryNode<T>* node) const
 {
-    BinaryNode<T>* current = node;
-    while (current->rightChild != NULL)
-        current = current->rightChild;
-    return current;
+    if(node == NULL)
+        return NULL;
+    else
+    {
+        BinaryNode<T>* current = node;
+        while (current->rightChild != NULL)
+            current = current->rightChild;
+        return current;
+    }
+
 }
 
 template <class T>
 BinaryNode<T>* BinarySearchTree<T>::minNode(BinaryNode<T>* node) const
 {
-    BinaryNode<T>* current = node;
-    while(current->leftChild != NULL)
-        current = current->leftChild;
-    return current;
+    if(node == NULL)
+    {
+        return NULL;
+    }
+    else
+    {
+        BinaryNode<T>* current = node;
+        while(current->leftChild != NULL)
+            current = current->leftChild;
+        return current;
+    }
+
 }
 
 template <class T>
