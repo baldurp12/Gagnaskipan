@@ -32,3 +32,4 @@ Thumbs.db
 # Weird files #
 ###############
 *.layout
+*.depend

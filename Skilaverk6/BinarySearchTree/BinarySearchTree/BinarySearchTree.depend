@@ -10,18 +10,18 @@
 1457531813 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarynode.h
 	<cstdlib>
 
-1457544036 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\main.cpp
+1457544730 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\main.cpp
 	<iostream>
 	"binarysearchtree.cpp"
 
-1457544641 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarysearchtree.cpp
+1457549861 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarysearchtree.cpp
 	"binarysearchtree.h"
 	"binarytree.cpp"
 
 1457531813 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarysearchtree.h
 	"binarytree.h"
 
-1457532578 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarytree.cpp
+1457549861 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarytree.cpp
 	<iostream>
 	<algorithm>
 	"binarytree.h"
