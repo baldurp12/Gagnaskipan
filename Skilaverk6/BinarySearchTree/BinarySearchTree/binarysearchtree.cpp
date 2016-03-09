@@ -40,16 +40,7 @@ void BinarySearchTree<T>::insert(const T& anItem)
 template <class T>
 void BinarySearchTree<T>::remove(const T& anItem)
 {
-    BinaryNode<T>* remNode = findAt(this->root, anItem);
-    if(remNode != NULL)
-    {
-        removeAt(remNode, anItem);
-    }
-    else
-    {
-        cout << "Nothing was removed" << endl;
-    }
-
+    removeAt(this->root, anItem);
 }
 
 template <class T>
