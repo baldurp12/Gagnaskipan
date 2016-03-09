@@ -88,8 +88,16 @@ void BinarySearchTree<T>::insertAt(BinaryNode<T>*& node, const T& anItem)
 template <class T>
 void BinarySearchTree<T>::removeAt(BinaryNode<T>*& node, const T& anItem)
 {
-    removeNode(node);
-}
+    BinaryNode<T>* parentNode = new BinaryNode<T>;
+    if (anItem == node->item) { // Then found
+        // Somehow send the parent node  
+    }
+    else if (anItem < node->item) {  // Search in the left tree
+       removeAt(node->leftChild, anItem);
+    }
+    else {                            // Search in the right tree
+        removeAt(node->rightChild, anItem);
+    }}
 
 template <class T>
 void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
