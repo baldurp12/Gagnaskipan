@@ -16,6 +16,65 @@ BinarySearchTree<T>::~BinarySearchTree()
 {
 }
 
+BinaryNode* BinarySearchTree::maxNode() const
+{
+
+}
+
+BinaryNode* BinarySearchTree::minNode() const
+{
+
+}
+
+template <class T>
+void BinarySearchTree::insert(const T& anItem)
+{
+
+}
+
+template <class T>
+void BinarySearchTree::remove(const T& anItem)
+{
+
+}
+
+template <class T>
+BinaryNode* BinarySearchTree::maxNode(BinaryNode<T>* node) const
+{
+
+}
+
+template <class T>
+BinaryNode* BinarySearchTree::minNode(BinaryNode<T>* node) const
+{
+
+}
+
+template <class T>
+void BinarySearchTree::insertAt(BinaryNode<T>*& node, const T& anItem)
+{
+
+}
+
+template <class T>
+void BinarySearchTree::removeAt(BinaryNode<T>*& node, const T& anItem)
+{
+
+}
+
+template <class T>
+void BinarySearchTree::removeNode(BinaryNode<T>*& node)
+{
+
+}
+
+template <class T>
+T BinarySearchTree::processLeftmost(BinaryNode<T>*& node)
+{
+
+}
+
+
 template <class T>
 BinaryNode<T>* BinarySearchTree<T>::findAt(BinaryNode<T> * node, const T& anItem) const
 // Retrieves an item starting searching at node
