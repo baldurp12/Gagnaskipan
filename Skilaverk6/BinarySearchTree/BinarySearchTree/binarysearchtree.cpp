@@ -98,6 +98,7 @@ void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
     BinaryNode<T>* remNode = node;
     if(node->isLeaf())
     {
+        delete node;
         node = NULL;
         cout << "Node was a leaf and has been terminated" << endl;
     }
