@@ -76,10 +76,6 @@ void BinarySearchTree<T>::insertAt(BinaryNode<T>*& node, const T& anItem)
     {
         insertAt(node->rightChild, anItem);
     }
-    else
-    {
-        cout << "Insert failed, perhaps on purpose" << endl;
-    }
 }
 
 template <class T>
@@ -98,26 +94,22 @@ void BinarySearchTree<T>::removeAt(BinaryNode<T>*& node, const T& anItem)
 template <class T>
 void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
 {
-    cout << "Attempted to remove " << node->item << endl;
     if(node->isLeaf())
     {
         delete node;
         node = NULL;
-        cout << "Node was a leaf and has been terminated" << endl;
     }
     else if(node->leftChild == NULL)
     {
         node = node->rightChild;
-        cout << "rightChild was removed" << endl;
     }
     else if(node->rightChild == NULL)
     {
         node = node->leftChild;
-        cout << "leftChild was removed" << endl;
     }
     else
     {
-        //node->item = processLeftmost(node->leftChild);
+        node->item = processLeftmost(node->rightChild);
         cout << "Should have listened to your mom" << endl;
     }
 }
@@ -125,7 +117,11 @@ void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
 template <class T>
 T BinarySearchTree<T>::processLeftmost(BinaryNode<T>*& node)
 {
-    
+    while(node->leftChild != NULL)
+        node = node->leftChild;
+    T temp = node->item;
+    delete node;
+    return temp;
 }
 
 template <class T>
