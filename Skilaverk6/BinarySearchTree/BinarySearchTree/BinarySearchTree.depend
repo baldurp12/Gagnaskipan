@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1457532578 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarytree.cpp
+	<iostream>
+	<algorithm>
+	"binarytree.h"
+
+1457531813 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarytree.h
+	"binarynode.h"
+
+1457531813 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarynode.h
+	<cstdlib>
+
+1457543098 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\main.cpp
+	<iostream>
+	"binarysearchtree.cpp"
+
+1457543141 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarysearchtree.cpp
+	"binarysearchtree.h"
+	"binarytree.cpp"
+
+1457531813 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarysearchtree.h
+	"binarytree.h"
+
+1457532578 c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarytree.cpp
+	<iostream>
+	<algorithm>
+	"binarytree.h"
+
+1457543141 source:c:\users\baldu\dropbox\bs.c-hugb\4.önn\gagnaskipan\verkefni\skilaverk6\binarysearchtree\binarysearchtree\binarysearchtree.cpp
+	"binarysearchtree.h"
+	"binarytree.cpp"
+

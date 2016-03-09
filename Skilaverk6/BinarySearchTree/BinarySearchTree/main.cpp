@@ -75,7 +75,7 @@ int main() {
     cout << "Inorder after third remove: ";
     bst.inorder();
     cout << endl;
-    bst.remove(10); // Not in the tree!
+    //bst.remove(10); // Not in the tree!
     cout << "Inorder after fourth remove: ";
     bst.inorder();
     cout << endl;
