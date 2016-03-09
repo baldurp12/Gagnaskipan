@@ -48,8 +48,7 @@ int BinaryTree<T>::size(BinaryNode<T>* node) const {
 template <class T>
 void BinaryTree<T>::deleteAll(BinaryNode<T>*& node) {
 // Deletes all nodes in the tree starting at node
-    if (node == NULL)
-        ;               // Don't do anything
+    if (node == NULL);               // Don't do anything
     else {
         deleteAll(node->leftChild);
         deleteAll(node->rightChild);

@@ -88,9 +88,8 @@ void BinarySearchTree<T>::insertAt(BinaryNode<T>*& node, const T& anItem)
 template <class T>
 void BinarySearchTree<T>::removeAt(BinaryNode<T>*& node, const T& anItem)
 {
-    BinaryNode<T>* parentNode = new BinaryNode<T>;
     if (anItem == node->item) { // Then found
-        // Somehow send the parent node  
+        removeNode(node);
     }
     else if (anItem < node->item) {  // Search in the left tree
        removeAt(node->leftChild, anItem);
@@ -103,7 +102,7 @@ template <class T>
 void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
 {
     cout << "Attempted to remove " << node->item << endl;
-    BinaryNode<T>* tempNode = node;
+
     if(node->isLeaf())
     {
         delete node;
@@ -125,7 +124,6 @@ void BinarySearchTree<T>::removeNode(BinaryNode<T>*& node)
         //node->item = processLeftmost(node->rightChild);
         cout << "Should have listened to your mom" << endl;
     }
-    //delete tempNode;
 }
 
 template <class T>
