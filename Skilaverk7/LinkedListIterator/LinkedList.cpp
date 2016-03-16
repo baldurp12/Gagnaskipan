@@ -51,7 +51,9 @@ void LinkedList<T>::append(T elem)
 template <class T>
 T LinkedList<T>::remove() throw (LinkedListException) {
 
-    // Should throw an exception if currNode does not point to a real node
+    if (currNode == NULL){
+        throw LinkedListException("Remove is fucked");
+    }
 
     Node* previousNode = currNode->getPrev();
     Node* nextNode = currNode->getNext();
@@ -112,7 +114,9 @@ int LinkedList<T>::length() const {
 template <class T>
 T LinkedList<T>::value() const throw(LinkedListException) {
     // Should throw an exception if currNode does not point to a real node
-
+    if (currNode == NULL){
+        throw LinkedListException("The value is fucked");
+    }
     return currNode->getData();
 }
 

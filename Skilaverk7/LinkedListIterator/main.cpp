@@ -59,7 +59,8 @@ void testList(LinkedList<T>& theList) {
             print(theList);
         }
         catch(LinkedListException e) {
-  //          cout << e.getMessage() << endl;
+            cout << "Fucked" << endl;
+            cout << e.getMessage() << endl;
         }
 
         theList.moveToEnd();
