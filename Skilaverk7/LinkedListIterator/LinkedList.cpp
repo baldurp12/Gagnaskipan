@@ -147,13 +147,3 @@ void LinkedList<T>::clear() {
     removeAll();
     init();
 }
-
-template<class T>
-void LinkedList<T>::begin(){
-    return header;
-}
-
-template<class T>
-void LinkedList<T>::end(){
-    return trailer;
-}
