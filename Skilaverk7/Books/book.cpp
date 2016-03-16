@@ -2,12 +2,13 @@
 
 Book::Book()
 {
+    cin.ignore();
     cout << "Enter author: " << endl;
-    cin >> author;
+    getline(cin, author);
     cout << "Enter title: " << endl;
-    cin >> title;
+    getline(cin, title);
     cout << "Enter date " << endl;
-    cin >> date;
+    getline(cin, date);
 }
 
 Book::Book(string anAuthor, string aTitle, string aDate)
