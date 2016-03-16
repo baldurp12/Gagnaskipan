@@ -13,7 +13,12 @@ LinkedList<T>::LinkedList(LinkedList<T>& lis) : header(NULL), trailer(NULL) {
     // Copy all nodes from lis
 
     // Should loop using the iterator+
-    cout << "Let it all out" << endl;
+    LinkedList::iterator it;
+
+    for(it = begin(); it != end(); ++it)
+    {
+            append(*it);
+    }
 }
 
 template <class T>
