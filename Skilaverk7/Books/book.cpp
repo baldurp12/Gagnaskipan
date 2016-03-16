@@ -22,7 +22,11 @@ string Book::getDate() const
 {
     return 0;
 }
-friend bool operator <(const Book &book1, const Book &book2)
+bool operator <(const Book &book1, const Book &book2)
 {
-    
+    if(book1.getAuthor() < book2.getAuthor())
+    {
+        return true;
+    }
+    return false;
 }
