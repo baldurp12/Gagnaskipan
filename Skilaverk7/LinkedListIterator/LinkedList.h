@@ -31,21 +31,63 @@ class LinkedList
         T remove() throw(LinkedListException); // Removes the current node and returns its element
         void clear();               // Clears the contents of the list
     
-
+    private:
+        class Node
+        {
+        public:
+            // Constructs a new node
+            Node() : data(T()){};
+            // Constructs a new node with a value, next and previous links
+            Node(T value, Node *nextLink, Node* prevLink) : data(value), next(nextLink), prev(prevLink) {};
+            
+            // Retrieve value for this node
+            T getData() const { return data; } ;
+            // Retrieve the next node
+            Node* getNext() const { return next; };
+            // Retrieve previous node
+            Node* getPrev() const { return prev; };
+            
+            // Modifies the value
+            void setValue(T value) { data = value; };
+            // Changes the reference to the next node
+            void setNext(Node* nextLink) { next = nextLink; };
+            // Changes the reference to the previous node
+            void setPrev(Node* prevLink) { prev = prevLink; };
+            
+        private:
+            T data;
+            Node* next;
+            Node* prev;
+        }; //End of Node class
+        
+    // Functions for LinkedList
+    void insert(Node* beforeMe, const T& elem);   // Inserts a new node with elem before node beforeMe
+    void removeAll();   // Deletes all nodes, excluding the sentinel nodes
+    void init();        // Initializes member variables
+    int currSize;       // Current number of list items
+    Node* currNode;  // A pointer to the current node of the list
+    Node* header;    // A pointer to the header (a sentinel node)
+    Node* trailer;   // A pointer to the trailer (a sentinel node)
+    
     public:
         class nodeIterator{
             public:
-                nodeIterator();
+                nodeIterator() :node(NULL) {}
+                nodeIterator(Node* p) : node(p) {}
                 ~nodeIterator();
                 nodeIterator& operator++()
                 {
                     if(node != NULL)
                     {
-                        node = node->next;
+                        node = node->getNext();
                     }
                     return *this;
                 }
-            
+                nodeIterator& operator++(int)
+                {
+                    nodeIterator result(*this);
+                    ++(*this);
+                }
                 nodeIterator& operator--()
                 {
                     if (node != NULL)
@@ -61,9 +103,9 @@ class LinkedList
                     return output;
                 }
             
-                nodeIterator& operator *()
+                T operator *()
                 {
-                    return node->data;
+                    return (node->getData());
                 }
             
                 bool operator ==(const nodeIterator& other)
@@ -80,48 +122,9 @@ class LinkedList
             private:
                 T* node;
         }; // The end of iter class
-        nodeIterator begin() { return(nodeIterator(header));}
-        nodeIterator end() { return(nodeIterator(trailer));}
-        typedef nodeIterator iterator;
     
-    private:
-        class Node
-        {
-            public:
-                // Constructs a new node
-                Node() : data(T()){};
-                // Constructs a new node with a value, next and previous links
-                Node(T value, Node *nextLink, Node* prevLink) : data(value), next(nextLink), prev(prevLink) {};
-
-                // Retrieve value for this node
-                T getData() const { return data; } ;
-                // Retrieve the next node
-                Node* getNext() const { return next; };
-                // Retrieve previous node
-                Node* getPrev() const { return prev; };
-
-                // Modifies the value
-                void setValue(T value) { data = value; };
-                // Changes the reference to the next node
-                void setNext(Node* nextLink) { next = nextLink; };
-                // Changes the reference to the previous node
-                void setPrev(Node* prevLink) { prev = prevLink; };
-
-            private:
-                T data;
-                Node* next;
-                Node* prev;
-        }; //End of Node class
-    
-        // Functions for LinkedList
-        void insert(Node* beforeMe, const T& elem);   // Inserts a new node with elem before node beforeMe
-        void removeAll();   // Deletes all nodes, excluding the sentinel nodes
-        void init();        // Initializes member variables
-        int currSize;       // Current number of list items
-        Node* currNode;  // A pointer to the current node of the list
-        Node* header;    // A pointer to the header (a sentinel node)
-        Node* trailer;   // A pointer to the trailer (a sentinel node)
+nodeIterator begin() { return(nodeIterator(header->getNext()));}
+nodeIterator end() { return(nodeIterator(trailer));}
+typedef nodeIterator iterator;
 };
-
-
 #endif // ARRAYLIST_H
