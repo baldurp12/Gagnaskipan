@@ -12,28 +12,38 @@ template <class T>
 class LinkedList
 {
     // The node class should now be part of this LinkedList class
-    // You also need to implement an iterator class as part of this LinkedList class
+    // You also need to implement an nodeIterator class as part of this LinkedList class
     public:
-        class iterator{
+        class nodeIterator{
             public:
-                iterator();
-                ~iterator();
-                iterator  & operator++()
+                nodeIterator();
+                ~nodeIterator();
+                nodeIterator  & operator++()
                 {
-                    return iterator->iterNext;
+                    if (node != NULL)
+                    {
+                        node = node->next;
+                    }
+                    return (*this);
                 }
-                iterator & operator--()
+                nodeIterator & operator--()
                 {
-                    return iterator->iterPrev;
+                    if (node != NULL)
+                    {
+                        node = node->prev;
+                    }
+                    return (*this);
                 }
-                iterator & operator *()
+                nodeIterator & operator *()
+                {
+                    return node->data;
+                }
+                nodeIterator & operator =()
                 {
 
                 }
             private:
-                Node* iterNode;
-                Node* iterNext;
-                Node* iterPrev;
+                T* node;
         }; // The end of iter class
         LinkedList();                   // Constructor
         LinkedList(LinkedList<T>& lis); // Copy constructor;
@@ -51,9 +61,10 @@ class LinkedList
         void insert (const T& elem);// Inserts an element before the current node
         T remove() throw(LinkedListException); // Removes the current node and returns its element
         void clear();               // Clears the contents of the list
-
+        void begin();
+        void end();
+        typedef nodeIterator iterator;
     private:
-
         class Node
         {
             public:
@@ -91,5 +102,6 @@ class LinkedList
         Node* header;    // A pointer to the header (a sentinel node)
         Node* trailer;   // A pointer to the trailer (a sentinel node)
 };
+
 
 #endif // ARRAYLIST_H

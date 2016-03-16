@@ -59,7 +59,7 @@ void testList(LinkedList<T>& theList) {
             print(theList);
         }
         catch(LinkedListException e) {
-            cout << e.getMessage() << endl;
+  //          cout << e.getMessage() << endl;
         }
 
         theList.moveToEnd();
@@ -104,7 +104,7 @@ void testList(LinkedList<T>& theList) {
         print(theList2);
     }
     catch(LinkedListException e) {
-        cout << e.getMessage() << endl;
+//        cout << e.getMessage() << endl;
     }
 }
 

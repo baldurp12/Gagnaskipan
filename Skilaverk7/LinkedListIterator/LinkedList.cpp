@@ -13,14 +13,8 @@ LinkedList<T>::LinkedList(LinkedList<T>& lis) : header(NULL), trailer(NULL) {
     // Copy all nodes from lis
 
     // Should loop using the iterator+
-    currNode = header;
-    lis->currNode = lis->header;
-    while(this->iterator != this->trailer) {
-        lis->currNode = this->*currNode;
-        iterator++;
-    }
+    cout << "Let it all out" << endl;
 }
-
 
 template <class T>
 LinkedList<T>::~LinkedList()
@@ -152,4 +146,14 @@ void LinkedList<T>::clear() {
 
     removeAll();
     init();
+}
+
+template<class T>
+void LinkedList<T>::begin(){
+    return header;
+}
+
+template<class T>
+void LinkedList<T>::end(){
+    return trailer;
 }
