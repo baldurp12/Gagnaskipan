@@ -74,7 +74,6 @@ class LinkedList
             public:
                 nodeIterator() :node(NULL) {}
                 nodeIterator(Node* p) : node(p) {}
-                ~nodeIterator();
                 nodeIterator& operator++()
                 {
                     if(node != NULL)
@@ -120,7 +119,7 @@ class LinkedList
                 }
                 
             private:
-                T* node;
+                Node* node;
         }; // The end of iter class
     
 nodeIterator begin() { return(nodeIterator(header->getNext()));}
