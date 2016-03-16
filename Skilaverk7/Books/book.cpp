@@ -7,20 +7,23 @@ Book::Book()
 
 Book::Book(string anAuthor, string aTitle, string aDate)
 {
+    author = anAuthor;
+    title = aTitle;
+    date = aDate;
     
 }
 string Book::getAuthor() const
 {
-    return 0;
+    return author;
 }
 
 string Book::getTitle() const
 {
-    return 0;
+    return title;
 }
 string Book::getDate() const
 {
-    return 0;
+    return date;
 }
 bool operator <(const Book &book1, const Book &book2)
 {
