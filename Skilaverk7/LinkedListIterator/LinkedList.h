@@ -14,37 +14,6 @@ class LinkedList
     // The node class should now be part of this LinkedList class
     // You also need to implement an nodeIterator class as part of this LinkedList class
     public:
-        class nodeIterator{
-            public:
-                nodeIterator();
-                ~nodeIterator();
-                nodeIterator  & operator++()
-                {
-                    if (node != NULL)
-                    {
-                        node = node->next;
-                    }
-                    return (*this);
-                }
-                nodeIterator & operator--()
-                {
-                    if (node != NULL)
-                    {
-                        node = node->prev;
-                    }
-                    return (*this);
-                }
-                nodeIterator & operator *()
-                {
-                    return node->data;
-                }
-                nodeIterator & operator =()
-                {
-
-                }
-            private:
-                T* node;
-        }; // The end of iter class
         LinkedList();                   // Constructor
         LinkedList(LinkedList<T>& lis); // Copy constructor;
         ~LinkedList();                  // Destructor
@@ -62,15 +31,65 @@ class LinkedList
         T remove() throw(LinkedListException); // Removes the current node and returns its element
         void clear();               // Clears the contents of the list
     
-    nodeIterator begin() { return(nodeIterator(header));}
-    nodeIterator end() { return(nodeIterator(trailer));}
-    typedef nodeIterator iterator;
+
+    public:
+        class nodeIterator{
+            public:
+                nodeIterator();
+                ~nodeIterator();
+                nodeIterator& operator++()
+                {
+                    if(node != NULL)
+                    {
+                        node = node->next;
+                    }
+                    return *this;
+                }
+            
+                nodeIterator& operator--()
+                {
+                    if (node != NULL)
+                    {
+                        node = (node)->prev;
+                    }
+                    return (*this);
+                }
+                
+                friend ostream &operator<<( ostream &output,const nodeIterator &it)
+                {
+                    output << it;
+                    return output;
+                }
+            
+                nodeIterator& operator *()
+                {
+                    return node->data;
+                }
+            
+                bool operator ==(const nodeIterator& other)
+                {
+                    return( node == other.node);
+                }
+                
+                
+                bool operator !=(const nodeIterator& other)
+                {
+                    return(node != other.node);
+                }
+                
+            private:
+                T* node;
+        }; // The end of iter class
+        nodeIterator begin() { return(nodeIterator(header));}
+        nodeIterator end() { return(nodeIterator(trailer));}
+        typedef nodeIterator iterator;
+    
     private:
         class Node
         {
             public:
                 // Constructs a new node
-                Node() {};
+                Node() : data(T()){};
                 // Constructs a new node with a value, next and previous links
                 Node(T value, Node *nextLink, Node* prevLink) : data(value), next(nextLink), prev(prevLink) {};
 
@@ -88,13 +107,13 @@ class LinkedList
                 // Changes the reference to the previous node
                 void setPrev(Node* prevLink) { prev = prevLink; };
 
-
             private:
                 T data;
                 Node* next;
                 Node* prev;
         }; //End of Node class
-
+    
+        // Functions for LinkedList
         void insert(Node* beforeMe, const T& elem);   // Inserts a new node with elem before node beforeMe
         void removeAll();   // Deletes all nodes, excluding the sentinel nodes
         void init();        // Initializes member variables
