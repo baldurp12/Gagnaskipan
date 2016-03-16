@@ -12,7 +12,13 @@ LinkedList<T>::LinkedList(LinkedList<T>& lis) : header(NULL), trailer(NULL) {
     init();
     // Copy all nodes from lis
 
-    // Should loop using the iterator
+    // Should loop using the iterator+
+    currNode = header;
+    lis->currNode = lis->header;
+    while(this->iterator != this->trailer) {
+        lis->currNode = this->*currNode;
+        iterator++;
+    }
 }
 
 
