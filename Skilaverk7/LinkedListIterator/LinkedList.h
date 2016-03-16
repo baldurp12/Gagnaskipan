@@ -127,7 +127,7 @@ class LinkedList
                 Node* node;
         }; // The end of iter class
 
-nodeIterator begin() { return(nodeIterator(header->getNext()));}
+nodeIterator begin() { return(nodeIterator(header));}
 nodeIterator end() { return(nodeIterator(trailer));}
 typedef nodeIterator iterator;
 };
