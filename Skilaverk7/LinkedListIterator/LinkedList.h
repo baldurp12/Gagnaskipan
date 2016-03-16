@@ -61,9 +61,10 @@ class LinkedList
         void insert (const T& elem);// Inserts an element before the current node
         T remove() throw(LinkedListException); // Removes the current node and returns its element
         void clear();               // Clears the contents of the list
-        void begin();
-        void end();
-        typedef nodeIterator iterator;
+    
+    nodeIterator begin() { return(nodeIterator(header));}
+    nodeIterator end() { return(nodeIterator(trailer));}
+    typedef nodeIterator iterator;
     private:
         class Node
         {
